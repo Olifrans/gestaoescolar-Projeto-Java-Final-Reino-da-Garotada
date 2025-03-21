@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Formulário de Professor</h1>
+    <h1>Formulário Cadastro de Professor</h1>
+
     <form th:action="@{/professores/salvar}" th:object="${professor}" method="post">
         <input type="hidden" th:field="*{id}">
         <label for="nome">Nome:</label>
