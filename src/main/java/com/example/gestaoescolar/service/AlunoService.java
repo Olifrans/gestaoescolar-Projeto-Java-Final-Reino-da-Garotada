@@ -41,8 +41,12 @@ public class AlunoService {
                     aluno.setMatricula(alunoAtualizado.getMatricula());
                     return alunoRepository.save(aluno);
                 })
-                .orElseThrow(() -> new RuntimeException("Aluno não encontrado com o ID: " + id));
+                .orElseThrow(() -> new RuntimeException("Aluno não encontrado com o ID: " + id
+            )
+        );
     }
+
+
 
     // Deletar (Delete)
     public void deletarAluno(Long id) {
